@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Country Details - Country Explorer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header with Globe Logo and Title -->
+  <header class="navbar">
+    <div class="navbar-content">
+      <img src="assets/world.png" alt="Country Explorer Logo" class="navbar-logo">
+      <h1 class="navbar-title">Country Explorer</h1>
+    </div>
+  </header>
+
+  <!-- Details Page Content Container -->
+  <main class="detail-container">
+    <!-- Back Button -->
+    <div class="back-btn-wrapper">
+      <button id="back-btn" class="btn-back">
+        &larr; Back
+      </button>
+    </div>
+
+    <!-- Status Message -->
+    <div id="detail-status" class="status-message"></div>
+
+    <!-- Country Detail Card -->
+    <div id="country-detail-card" class="detail-card" style="display: none;">
+      <!-- Flag Column -->
+      <div class="detail-flag-wrapper">
+        <img id="detail-flag" src="" alt="Country Flag" class="detail-flag">
+      </div>
+
+      <!-- Info Column -->
+      <div class="detail-info">
+        <h2 id="detail-name" class="detail-country-title"></h2>
+        <p id="detail-official" class="detail-official-name"></p>
+
+        <div class="detail-grid-info">
+          <div class="detail-item"><strong>Native Name: </strong><span id="detail-native"></span></div>
+          <div class="detail-item"><strong>Population: </strong><span id="detail-population"></span></div>
+          <div class="detail-item"><strong>Region: </strong><span id="detail-region"></span></div>
+          <div class="detail-item"><strong>Sub Region: </strong><span id="detail-subregion"></span></div>
+          <div class="detail-item"><strong>Capital: </strong><span id="detail-capital"></span></div>
+          <div class="detail-item"><strong>Currencies: </strong><span id="detail-currencies"></span></div>
+          <div class="detail-item"><strong>Languages: </strong><span id="detail-languages"></span></div>
+          <div class="detail-item"><strong>Top Level Domain: </strong><span id="detail-tld"></span></div>
+        </div>
+
+        <!-- Border Countries Section -->
+        <div class="detail-borders-section">
+          <h3 class="detail-borders-title">Border Countries:</h3>
+          <div id="detail-borders" class="borders-list">
+            <!-- Dynamically populated border country badges -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="detail.js"></script>
+</body>
+</html>
