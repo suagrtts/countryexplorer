@@ -130,7 +130,13 @@ function countryCardHandler(country) {
  * @param {Array} data 
  */
 function populateCountryCards(data) {
-  allCountries = data || [];
+  if (Array.isArray(data)) {
+    allCountries = data;
+  } else if (data && Array.isArray(data.data)) {
+    allCountries = data.data;
+  } else {
+    allCountries = [];
+  }
   filteredCountries = allCountries;
   displayedCount = ITEMS_PER_PAGE;
   applyFilters();
